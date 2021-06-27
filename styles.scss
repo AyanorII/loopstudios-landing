@@ -37,12 +37,10 @@ header {
 .nav {
     display: flex;
     flex-direction: column;
-    // position: relative;
 
     .nav-container {
         margin: 40px 24px;
         position: relative;
-        // background: none;
         transition: height 1s;
 
 
@@ -110,12 +108,10 @@ header {
     @keyframes slideIn {
         from {
             transform: translateY(-110%);
-            // top: 0;
         }
 
         to {
             transform: translateY(0%);
-            // top: 100%;
         }
     }
     
