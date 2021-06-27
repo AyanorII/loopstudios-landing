@@ -112,7 +112,7 @@ header {
   -webkit-animation-duration: 1s;
 }
 
-.nav__links--deactive {
+.nav__links--hide {
   animation-name: slideOut;
   animation-duration: 1s;
   -webkit-animation-name: slideOut;

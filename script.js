@@ -4,21 +4,21 @@ const navContainer = document.getElementsByClassName('nav-container')[0];
 const navLinks = document.getElementsByClassName('nav__links')[0];
 
 
-menuButton.addEventListener('click', function(){
-    setTimeout(function(){
+menuButton.addEventListener('click', function () {
+    setTimeout(function () {
         navContainer.classList.add('nav-container--active');
         closeButton.classList.add('close-btn--active');
     }, 600);
 
     navLinks.classList.add('nav__links--active');
-    navLinks.classList.remove('nav__links--deactive');
+    navLinks.classList.remove('nav__links--hide');
     menuButton.classList.add('hamburguer--none');
 })
 
-closeButton.addEventListener('click', function(){
-    navLinks.classList.add('nav__links--deactive');
+closeButton.addEventListener('click', function () {
+    navLinks.classList.add('nav__links--hide');
 
-    setTimeout(function(){
+    setTimeout(function () {
         navContainer.classList.remove('nav-container--active');
         closeButton.classList.remove('close-btn--active');
     }, 400);
@@ -27,7 +27,7 @@ closeButton.addEventListener('click', function(){
         menuButton.classList.remove('hamburguer--none');
     }, 700);
 
-    setTimeout(function(){
+    setTimeout(function () {
         navLinks.classList.remove('nav__links--active');
     }, 800);
 })
