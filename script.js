@@ -5,17 +5,29 @@ const navLinks = document.getElementsByClassName('nav__links')[0];
 
 
 menuButton.addEventListener('click', function(){
-    navContainer.classList.toggle('nav-container--active');
-    navLinks.classList.toggle('nav__links--active');
-    closeButton.classList.toggle('close-btn--active');
-    menuButton.classList.toggle('hamburguer--none');
+    setTimeout(function(){
+        navContainer.classList.add('nav-container--active');
+        closeButton.classList.add('close-btn--active');
+    }, 600);
 
-
+    navLinks.classList.add('nav__links--active');
+    navLinks.classList.remove('nav__links--deactive');
+    menuButton.classList.add('hamburguer--none');
 })
 
 closeButton.addEventListener('click', function(){
-    navContainer.classList.toggle('nav-container--active');
-    navLinks.classList.toggle('nav__links--active');
-    menuButton.classList.toggle('hamburguer--none');
-    closeButton.classList.toggle('close-btn--active');
+    navLinks.classList.add('nav__links--deactive');
+
+    setTimeout(function(){
+        navContainer.classList.remove('nav-container--active');
+        closeButton.classList.remove('close-btn--active');
+    }, 400);
+
+    setTimeout(() => {
+        menuButton.classList.remove('hamburguer--none');
+    }, 700);
+
+    setTimeout(function(){
+        navLinks.classList.remove('nav__links--active');
+    }, 800);
 })
