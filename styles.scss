@@ -37,7 +37,7 @@ header {
 .nav {
     display: flex;
     flex-direction: column;
-    position: relative;
+    // position: relative;
 
     .nav-container {
         margin: 40px 24px;
@@ -144,11 +144,28 @@ header {
     border: 1px solid #FFF;
     padding: 1.5rem;
     margin: 200px 24px;
+    animation: border 1.5s;
+    animation-iteration-count: infinite;
+    max-width: 650px;
 
     &__heading {
         text-transform: uppercase;
         font-size: 40px;
         line-height: 38px;
+    }
+
+    @keyframes border {
+        0% {
+            border: 2px solid #FFF;
+        }
+
+        50% {
+            border: 5px solid #FFF;
+        }
+
+        100% {
+            border: 2px solid #FFF;
+        }
     }
 }
 
@@ -300,7 +317,7 @@ header {
     }
 
     .hero {
-        max-width: 400px;
+        width: 50%;
         margin: 12.5rem 10%;
         padding: 2rem;
 
@@ -336,6 +353,8 @@ header {
     }
 
     .nav {
+        position: relative;
+
         &__items {
             padding-bottom: 8px;
             transition: all 1s;
@@ -362,31 +381,16 @@ header {
     }
 
     .hero {
+        position: relative;
         padding: 2.5rem;
         margin: 5% 10%;
         z-index: 999;
-        position: relative;
-        animation: border 1.5s;
-        animation-iteration-count: infinite;
-        max-width: 650px;
+        width: 650px;
         
         &__heading {
             z-index: 999;
             line-height: 70px;
             font-size: 4.5rem;
-        }
-    }
-    @keyframes border {
-        0% {
-            border: 2px solid #FFF;
-        }
-
-        50% {
-            border: 5px solid #FFF;
-        }
-
-        100% {
-            border: 2px solid #FFF;
         }
     }
     
