@@ -96,11 +96,17 @@ header {
             justify-content: center;
             animation-name: slideIn;
             animation-duration: 1s;
+
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 1s;
         }
 
         &--deactive {
             animation-name: slideOut;
             animation-duration: 1s;
+
+            -webkit-animation-name: slideOut;
+            -webkit-animation-duration: 1s;
         }
 
     }
